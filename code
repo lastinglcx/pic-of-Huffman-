@@ -1,1 +1,51 @@
+#coding=utf-8
+import numpy as np
+from nltk.book import *
+from PIL import Image
+import matplotlib.pyplot as plt
+import matplotlib.image as mpimg
+
+
+
+
+'''
+img = mpimg.imread('image.png')
+gray = picture_convert(img)
+plt.imshow(gray, cmap = plt.get_cmap('gray'))
+plt.show()
+'''
+class node:
+
+    def __init__(self, right=None, left=None, parent=None, weight=0, code=None):
+
+        self.left = left
+
+        self.right = right
+
+        self.parent = parent
+
+        self.weight = weight
+
+        self.code = code
+
+def picture_convert(img):
+    im = Image.open(img).convert('L') #灰度
+    #out = im.resize((80,80),Image.ANTIALIAS) #重新定义图片尺寸大小
+    im.save('gray.bmp')
+    #return np.dot(rgb[...,:3], [0.299, 0.587, 0.114])
+
+#统计每个像素出现的次数
+def pin_lv_tong_ji(list):
+    for key in list:
+        for key in list:
+            num=num+1
+        count={key:num}
+
+fdist1 = FreqDist(np.dot())
+list = fdist1.keys()
+
+
+#此函数主要为生成叶子结点，将每个节点赋予权值与像素值
+def gou_zao_ye_zi(xiang_su_zhi):
+
 
